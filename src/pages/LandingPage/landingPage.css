@@ -1,0 +1,35 @@
+.picture-area {
+  border: 2px solid #afeeee;
+  margin: 10px 5px;
+  height: 306px;
+}
+
+.page-desc {
+  margin: 10px 5px;
+  text-align: start;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.btn-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.btn {
+  border: 2px solid #ff7f50;
+  background-color: #ff7f50;
+  height: 44px;
+  font-size: 1rem;
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  font-weight: bold;
+  background-color: #fe6f12;
+}
