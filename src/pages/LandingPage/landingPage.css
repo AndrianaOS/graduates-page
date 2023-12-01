@@ -33,3 +33,14 @@
   font-weight: bold;
   background-color: #fe6f12;
 }
+
+@media screen and (min-width: 700px) {
+  .picture-area {
+    width: 685px;
+  }
+
+  .btn-area {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

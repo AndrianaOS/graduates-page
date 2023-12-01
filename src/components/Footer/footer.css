@@ -5,10 +5,41 @@
 }
 
 .socials {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .socials:hover {
-    font-weight: bold;
-    color: deeppink;
+  font-weight: bold;
+  color: deeppink;
+}
+
+@media screen and (min-width: 700px) {
+  #creator {
+    grid-area: creator;
+  }
+
+  #linkedin {
+    grid-area: linkedin;
+  }
+
+  #github {
+    grid-area: github;
+  }
+
+  #portfolio {
+    grid-area: portfolio;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 40px);
+    grid-template-areas:
+      "creator creator"
+      "linkedin github"
+      "portfolio portfolio";
+  }
 }
