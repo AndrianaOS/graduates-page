@@ -17,6 +17,12 @@ const Header = () => {
         </div>
       )}
       {showMenu && <Navbar handleClose={handleClose} showMenu={showMenu} />}
+      <section className="menu-list">
+        <a href="/">Home</a>
+        <a href="/form">Graduate Form</a>
+        <a href="/about">About me</a>
+        <a href="/graduates">Meet the Graduates</a>
+      </section>
     </header>
   );
 };
