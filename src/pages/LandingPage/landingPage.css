@@ -34,6 +34,12 @@
   cursor: pointer;
 }
 
+.form-info {
+  font-style: italic;
+  font-size: 0.8rem;
+  margin: 0 20px;
+}
+
 .btn:hover {
   font-weight: bold;
   background-color: #fe6f12;

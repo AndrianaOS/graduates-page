@@ -26,7 +26,7 @@ const LandingPage = () => {
         </Link>
 
         <span className="form-info">
-          If you would like to be displayed, click button below
+          If you would like to be displayed, click button below and fill in the form.
         </span>
         <Link to="/form">
           <Button buttonName={"Add Graduate"} />
