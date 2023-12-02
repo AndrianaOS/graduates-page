@@ -33,7 +33,7 @@
   margin-right: 6px;
 }
 
-.menu-list {
+.list {
   display: flex;
   flex-direction: column;
   width: 10em;
@@ -54,8 +54,13 @@
   right: 0px;
 }
 
+.list:hover {
+  color: deeppink;
+  text-decoration: dotted;
+}
+
 @media screen and (min-width: 700px) {
-    .nav-menu {
-        width: 50%;
-    }
+  .nav-menu {
+    width: 50%;
+  }
 }

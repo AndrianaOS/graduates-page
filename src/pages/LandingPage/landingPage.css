@@ -1,12 +1,16 @@
+.info-area {
+  margin: 20px;
+}
+
 .picture-area {
   border: 2px solid #afeeee;
   margin: 10px auto;
   height: 306px;
-  max-width: 650px;
+  /* max-width: 650px; */
 }
 
 .page-desc {
-  margin: 10px 25px 30px;
+  margin: 10px 0 30px;
   text-align: start;
   font-size: 1rem;
   line-height: 2;
@@ -39,5 +43,23 @@
   .btn-area {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .info-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
+  }
+
+  .picture-area {
+    width: 625px;
+    margin: 20px 30px 40px;
+  }
+
+  .homepage {
+    display: grid;
+    row-gap: 50px;
   }
 }
