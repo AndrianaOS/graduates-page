@@ -1,4 +1,4 @@
-import React, { useState, useEffect, } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./graduatePage.css";
 import { Link } from "react-router-dom";
 
@@ -27,6 +27,23 @@ const GraduatesPage = () => {
     getAllGraduates();
   }, []);
 
+  const memoizedGraduates = useMemo(() => {
+    return graduateData.map((graduate) => ({
+      id: graduate.db_data.id,
+      avatarUrl: graduate.github_data.data.user.avatarUrl,
+      name: graduate.db_data.name,
+      bio: graduate.github_data.data.user.bio,
+      cvLink: graduate.db_data.cv_link,
+      githubLink: graduate.db_data.github_url,
+      email: graduate.github_data.data.user.email,
+      linkedInLink: graduate.github_data.data.user.socialAccounts.nodes.map(
+        (data) => data.url
+      ),
+      websiteUrl: graduate.github_data.data.user.websiteUrl,
+      role: graduate.db_data.role,
+    }));
+  }, [graduateData]);
+
   console.log(graduateData);
 
   return (
@@ -34,7 +51,36 @@ const GraduatesPage = () => {
       <section>
         <h1>See all our wonderful Graduates</h1>
         <div>
-          {graduateData.length > 0 &&
+          {memoizedGraduates.length > 0 &&
+            memoizedGraduates.map((graduate) => (
+              <aside key={graduate.id} className="graduate-data">
+                <img src={graduate.avatarUrl} alt={`${graduate.name} Avatar`} />
+                <h2>{graduate.name}</h2>
+                <section className="link-info">
+                  <p>
+                    <a href={graduate.cvLink}>CV</a>
+                  </p>
+                  <p>
+                    <a href={graduate.githubLink}>GitHub</a>
+                  </p>
+                  {graduate.email && (
+                    <p>
+                      <a href={graduate.email}>Email</a>
+                    </p>
+                  )}
+                  <p>
+                    <a href={graduate.linkedInLink}>LinkedIn</a>
+                  </p>
+                  {graduate.websiteUrl && (
+                    <p>
+                      <a href={graduate.websiteUrl}>Portfolio</a>
+                    </p>
+                  )}
+                </section>
+                <p>{graduate.role} Developer</p>
+              </aside>
+            ))}
+          {/* {graduateData.length > 0 &&
             graduateData.map((graduate) => (
               <aside key={graduate.db_data.id} className="graduate-data">
                 <img
@@ -73,7 +119,7 @@ const GraduatesPage = () => {
 
                 <p>{graduate.db_data.role} developer</p>
               </aside>
-            ))}
+            ))} */}
         </div>
       </section>
       <Link to="/">Back to Homepage</Link>
