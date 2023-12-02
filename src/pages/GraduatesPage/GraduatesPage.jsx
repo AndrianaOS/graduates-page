@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, } from "react";
 import "./graduatePage.css";
 import { Link } from "react-router-dom";
 
@@ -62,6 +62,13 @@ const GraduatesPage = () => {
                       LinkedIn
                     </a>
                   </p>
+                  {graduate.github_data.data.user.websiteUrl && (
+                    <p>
+                      <a href={graduate.github_data.data.user.websiteUrl}>
+                        Portfolio
+                      </a>
+                    </p>
+                  )}
                 </section>
 
                 <p>{graduate.db_data.role} developer</p>

@@ -25,8 +25,10 @@ const LandingPage = () => {
           <Button buttonName={"See all our Graduates"} />
         </Link>
 
-        <span className="form-info">If you would like to be displayed, click button below</span>
-        <Link to="/graduate-form">
+        <span className="form-info">
+          If you would like to be displayed, click button below
+        </span>
+        <Link to="/form">
           <Button buttonName={"Add Graduate"} />
         </Link>
       </aside>
