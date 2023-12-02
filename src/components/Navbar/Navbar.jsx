@@ -8,7 +8,7 @@ const Navbar = ({ handleClose }) => {
         <span className="menu-icon bar-one"></span>
         <span className="menu-icon bar-two"></span>
       </section>
-      <section className="menu-list">
+      <section className="list">
         <a href="/">Home</a>
         <a href="/form">Graduate Form</a>
         <a href="/about">About me</a>
