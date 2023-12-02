@@ -1,4 +1,14 @@
 .graduate-data {
   border: 2px pink solid;
   margin: 0 10px 20px;
+  padding-top: 15px;
+}
+
+.graduate-data img {
+  width: 170px;
+  border-radius: 90px;
+}
+
+.bio {
+  padding: 10px;
 }
