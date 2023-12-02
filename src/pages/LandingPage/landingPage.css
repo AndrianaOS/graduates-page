@@ -1,11 +1,12 @@
 .picture-area {
   border: 2px solid #afeeee;
-  margin: 10px 5px;
+  margin: 10px auto;
   height: 306px;
+  max-width: 650px;
 }
 
 .page-desc {
-  margin: 10px 5px 30px;
+  margin: 10px 25px 30px;
   text-align: start;
   font-size: 1rem;
   line-height: 2;
@@ -35,10 +36,6 @@
 }
 
 @media screen and (min-width: 700px) {
-  .picture-area {
-    width: 685px;
-  }
-
   .btn-area {
     flex-direction: row;
     justify-content: space-evenly;
