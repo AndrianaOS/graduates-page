@@ -2,6 +2,8 @@
   background-color: #adff2f;
   padding: 5px;
   margin: 20px 0 0;
+  position: absolute;
+  width: 100%;
 }
 
 .socials {
