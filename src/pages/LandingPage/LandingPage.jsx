@@ -10,25 +10,22 @@ const LandingPage = () => {
         <aside className="picture-area">Place Image here</aside>
         <aside className="page-desc">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-            illo ullam dolores repellat a omnis esse in necessitatibus assumenda
-            provident. Ipsam velit obcaecati corporis et maiores non ipsa odit
-            asperiores?
+            Welcome to CodeYourFuture's Graduates' Page where you can view all
+            our eligible graduates and either connect with them or view some of
+            their wonderful work they have created.
           </p>
         </aside>
       </section>
       <aside className="btn-area">
-        {/* <Link to="/" className="list-links">
-          Home
-        </Link> */}
-        <Link to="/graduates">
+        <Link to="/graduates" className="button-space">
           <Button buttonName={"See all our Graduates"} />
         </Link>
 
         <span className="form-info">
-          If you would like to be displayed, click button below and fill in the form.
+          If you would like to be displayed, click button below and fill in the
+          form.
         </span>
-        <Link to="/form">
+        <Link to="/form" className="button-space">
           <Button buttonName={"Add Graduate"} />
         </Link>
       </aside>
