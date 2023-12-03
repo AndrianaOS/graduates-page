@@ -6,7 +6,7 @@
 }
 
 .form-title {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .form-text {
@@ -24,4 +24,48 @@
   margin-bottom: 30px;
   width: 230px;
   border: 2px solid lightgray;
+}
+
+@media screen and (min-width: 700px) {
+  #name-field {
+    grid-area: name;
+  }
+
+  #github-field {
+    grid-area: github;
+  }
+
+  #cv-field {
+    grid-area: cv;
+  }
+
+  #role {
+    grid-area: role;
+  }
+
+  #form-info {
+    grid-area: info;
+  }
+
+  #submit-btn {
+    grid-area: submit;
+  }
+
+  .form-text {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .demo-helper-text-aligned {
+    width: 30rem;
+  }
+
+  /* .graduate-form {
+    display: grid;
+    grid-template-areas:
+      "name github"
+      "cv role"
+      "info info"
+      "submit submit";
+  } */
 }

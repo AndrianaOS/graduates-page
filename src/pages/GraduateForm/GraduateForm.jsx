@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import "./graduateForm.css";
-import Button from "../../components/Button/Button.jsx";
+// import Button from "../../components/Button/Button.jsx";
 
 const GraduateForm = () => {
   const initialState = {
@@ -43,11 +43,13 @@ const GraduateForm = () => {
 
   return (
     <div>
-      <h2 className="form-title">Fill in this form to be added on the Graduates list</h2>
+      <h2 className="form-title">
+        Fill in this form to be added on the Graduates list
+      </h2>
       <form method="post" onSubmit={handleSubmit} className="graduate-form">
         <Box
           sx={{
-            display: "flex",
+            display: "grid",
             alignItems: "center",
             "& > :not(style)": { m: 1 },
           }}
@@ -55,6 +57,7 @@ const GraduateForm = () => {
         >
           <TextField
             helperText="Name example: Jane Doe"
+            id="name-field"
             className="demo-helper-text-aligned"
             label="Name"
             name="name"
@@ -64,6 +67,7 @@ const GraduateForm = () => {
           />
           <TextField
             helperText=" Link example: https://github.com/name"
+            id="github-field"
             className="demo-helper-text-aligned"
             label="GitHub Link"
             name="github_url"
@@ -73,6 +77,7 @@ const GraduateForm = () => {
           />
           <TextField
             helperText="Share link to CV"
+            id="cv-field"
             className="demo-helper-text-aligned"
             label="CV"
             name="cv_link"
@@ -106,8 +111,13 @@ const GraduateForm = () => {
             />
           </aside>
         </fieldset>
-        <span className="form-info">**All fields are required**</span>
-        <Button buttonName="Submit" type="submit" />
+        <span className="form-info" id="form-info">
+          **All fields are required**
+        </span>
+        {/* <Button buttonName="Submit" type="submit" id="submit-btn"/> */}
+        <button className="btn" id="submit-btn">
+          Submit
+        </button>
       </form>
       <Link to="/">Back to Homepage</Link>
     </div>
