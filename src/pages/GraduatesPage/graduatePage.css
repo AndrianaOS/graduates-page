@@ -1,7 +1,20 @@
+.graduate-card {
+  perspective: 60rem;
+}
+
 .graduate-data {
-  border: 2px pink solid;
+  border: 2px #c8a8e9 solid;
   margin: 0 10px 20px;
   padding-top: 15px;
+  transition: rotate 600ms, scale 1s;
+}
+
+.graduate-data:hover {
+  rotate: y 1turn;
+  /* scale: 1; */
+  background-color: #f5bcba;
+  border-color: #f5bcba;
+  box-shadow: 0.25rem 0.25rem 0.5rem #fe6f12;
 }
 
 .graduate-data img {
@@ -16,4 +29,21 @@
 .link-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.grad-role {
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 700px) {
+  .graduate-card {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin: 0 10px;
+  }
+
+  .bio {
+    margin: 16px;
+  }
 }

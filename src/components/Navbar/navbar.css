@@ -17,8 +17,9 @@
 
 .menu-icon {
   width: 15px;
-  border: 1px solid black;
+  border: 1px solid #1c0133;
 }
+
 
 .bar-one {
   transform: rotate(50deg);
@@ -44,7 +45,7 @@
 }
 
 .nav-menu {
-  background: #fae1e2;
+  background: #f4e7fb;;
   opacity: 0.9;
   position: absolute;
   width: 100%;
@@ -54,8 +55,8 @@
   right: 0px;
 }
 
-.list:hover {
-  color: deeppink;
+.list-item:hover {
+  color: #fe6f12;
   text-decoration: dotted;
 }
 
