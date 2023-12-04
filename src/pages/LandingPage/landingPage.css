@@ -1,5 +1,4 @@
-#f4effb
-.info-area {
+#f4effb .info-area {
   margin: 20px 5px;
 }
 
@@ -9,7 +8,6 @@
 
 .picture-area img {
   width: 19em;
-  height: 204px;
 }
 
 .page-desc {
