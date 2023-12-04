@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import "./graduatePage.css";
 import { Link } from "react-router-dom";
+import Heading from "../../components/Heading/Heading";
 
 const GraduatesPage = () => {
   const [graduateData, setGraduateData] = useState([]);
@@ -49,13 +50,17 @@ const GraduatesPage = () => {
   return (
     <div>
       <section>
+        <Heading headingName="Graduates" />
         <h1>See all our wonderful Graduates</h1>
-        <div>
+        <div className="graduate-card">
           {memoizedGraduates.length > 0 &&
             memoizedGraduates.map((graduate) => (
               <aside key={graduate.id} className="graduate-data">
                 <img src={graduate.avatarUrl} alt={`${graduate.name} Avatar`} />
                 <h2>{graduate.name}</h2>
+                <p className="bio">
+                  <b>About Me:</b> {graduate.bio}
+                </p>
                 <section className="link-info">
                   <p>
                     <a href={graduate.cvLink}>CV</a>
@@ -77,49 +82,9 @@ const GraduatesPage = () => {
                     </p>
                   )}
                 </section>
-                <p>{graduate.role} Developer</p>
+                <p className="grad-role">{graduate.role} Developer</p>
               </aside>
             ))}
-          {/* {graduateData.length > 0 &&
-            graduateData.map((graduate) => (
-              <aside key={graduate.db_data.id} className="graduate-data">
-                <img
-                  src={graduate.github_data.data.user.avatarUrl}
-                  alt={`${graduate.db_data.name} Avatar`}
-                />
-                <h2>{graduate.db_data.name}</h2>
-                <p className="bio">{graduate.github_data.data.user.bio}</p>
-                <section className="link-info">
-                  <p>
-                    <a href={graduate.db_data.cv_link}>CV</a>
-                  </p>
-                  <p>
-                    <a href={graduate.db_data.github_url}>GitHub</a>
-                  </p>
-                  {graduate.github_data.data.user.email && (
-                    <p>Email: {graduate.github_data.data.user.email}</p>
-                  )}
-                  <p>
-                    <a
-                      href={graduate.github_data.data.user.socialAccounts.nodes.map(
-                        (data) => data.url
-                      )}
-                    >
-                      LinkedIn
-                    </a>
-                  </p>
-                  {graduate.github_data.data.user.websiteUrl && (
-                    <p>
-                      <a href={graduate.github_data.data.user.websiteUrl}>
-                        Portfolio
-                      </a>
-                    </p>
-                  )}
-                </section>
-
-                <p>{graduate.db_data.role} developer</p>
-              </aside>
-            ))} */}
         </div>
       </section>
       <Link to="/">Back to Homepage</Link>
