@@ -44,7 +44,7 @@ const GraduateForm = () => {
 
   return (
     <div>
-      <Heading headingName="Graduate Form"/>
+      <Heading headingName="Form" />
       <h2 className="form-title">
         Fill in this form to be added on the Graduates list
       </h2>
@@ -145,11 +145,13 @@ const GraduateForm = () => {
           **All fields are required**
         </span>
         {/* <Button buttonName="Submit" type="submit" id="submit-btn"/> */}
-        <button className="btn" id="submit-btn">
-          Submit
-        </button>
+        <div className="button-space">
+          <button className="btn" id="submit-btn">
+            Submit
+          </button>
+        </div>
       </form>
-      <Link to="/">Back to Homepage</Link>
+      <Link to="/">Return to Homepage</Link>
     </div>
   );
 };
