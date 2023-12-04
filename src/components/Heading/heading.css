@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+svg {
+  font-family: "Acme", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+svg text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #365fa0;
+  font-size: 4rem;
+}
+
+@keyframes stroke {
+  0% {
+    fill: #488acc00;
+    stroke: #365fa0;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: #488acc00;
+    stroke: #365fa0;
+  }
+  80% {
+    fill: #488acc00;
+    stroke: #365fa0;
+    stroke-width: 3;
+  }
+  100% {
+    fill: #488acc;
+    stroke: #365fa000;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
