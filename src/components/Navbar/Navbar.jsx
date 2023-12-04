@@ -9,10 +9,18 @@ const Navbar = ({ handleClose }) => {
         <span className="menu-icon bar-two"></span>
       </section>
       <section className="list">
-        <a href="/">Home</a>
-        <a href="/form">Graduate Form</a>
-        <a href="/about">About me</a>
-        <a href="/graduates">Meet the Graduates</a>
+        <a href="/" className="list-item">
+          Home
+        </a>
+        <a href="/form" className="list-item">
+          Graduate Form
+        </a>
+        <a href="/about" className="list-item">
+          About me
+        </a>
+        <a href="/graduates" className="list-item">
+          Meet the Graduates
+        </a>
       </section>
     </nav>
   );
