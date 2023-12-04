@@ -23,24 +23,36 @@
 .role-area {
   margin-bottom: 30px;
   width: 230px;
-  border: 2px solid lightgray;
+  border: 1.5px solid lightgray;
 }
 
 @media screen and (min-width: 700px) {
   #name-field {
     grid-area: name;
+    margin-bottom: 10px;
   }
 
   #github-field {
     grid-area: github;
+    margin-bottom: 10px;
   }
 
   #cv-field {
     grid-area: cv;
+    margin-bottom: 10px;
   }
 
+  /* .css-12g1gq6 {
+    margin: 25px 8px 8px;
+  } */
+
   #role {
+    display: flex;
+    justify-content: space-around;
     grid-area: role;
+    margin-top: 0;
+    padding: 8px;
+    border-radius: 3px;
   }
 
   #form-info {
@@ -54,18 +66,13 @@
   .form-text {
     width: 80%;
     justify-content: center;
+    align-items: baseline;
   }
 
-  .demo-helper-text-aligned {
-    width: 30rem;
+  .role-selection {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 5px;
   }
 
-  /* .graduate-form {
-    display: grid;
-    grid-template-areas:
-      "name github"
-      "cv role"
-      "info info"
-      "submit submit";
-  } */
 }
