@@ -18,10 +18,10 @@ const LandingPage = () => {
             Welcome to CodeYourFuture's Graduates' Page where you can view all
             our eligible graduates and either connect with them or view some of
             their wonderful work they have created.
-            <div className="form-info">
+            <span className="form-info notice">
               **NOTE: If you would like to be displayed, click button below and
               fill in the form.
-            </div>
+            </span>
           </p>
         </aside>
       </section>
