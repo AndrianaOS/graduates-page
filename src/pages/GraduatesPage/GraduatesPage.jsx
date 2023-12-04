@@ -9,7 +9,9 @@ const GraduatesPage = () => {
 
   async function getAllGraduates() {
     try {
-      const response = await fetch("http://127.0.0.1:5000/allGraduates");
+      const response = await fetch(
+        "https://graduates-server.onrender.com/allGraduates"
+      );
 
       if (!response.ok) {
         throw new Error(`Error: ${response.error}`);
@@ -56,33 +58,39 @@ const GraduatesPage = () => {
           {memoizedGraduates.length > 0 &&
             memoizedGraduates.map((graduate) => (
               <aside key={graduate.id} className="graduate-data">
-                <img src={graduate.avatarUrl} alt={`${graduate.name} Avatar`} />
-                <h2>{graduate.name}</h2>
-                <p className="bio">
+                <img
+                  src={graduate.avatarUrl}
+                  alt={`${graduate.name} Avatar`}
+                  id="avatar"
+                />
+                <h2 id="grad-name">{graduate.name}</h2>
+                <p className="grad-role" id="grad-role">
+                  {graduate.role} Developer
+                </p>
+                <p className="bio" id="grad-bio">
                   <b>About Me:</b> {graduate.bio}
                 </p>
-                <section className="link-info">
-                  <p>
+                <section className="link-info" id="link-info">
+                  <p id="grad-cv">
                     <a href={graduate.cvLink}>CV</a>
                   </p>
-                  <p>
+                  <p id="grad-gh">
                     <a href={graduate.githubLink}>GitHub</a>
                   </p>
                   {graduate.email && (
-                    <p>
+                    <p id="grad-email">
                       <a href={graduate.email}>Email</a>
                     </p>
                   )}
-                  <p>
+                  <p id="grad-linkedin">
                     <a href={graduate.linkedInLink}>LinkedIn</a>
                   </p>
                   {graduate.websiteUrl && (
-                    <p>
+                    <p id="grad-website">
                       <a href={graduate.websiteUrl}>Portfolio</a>
                     </p>
                   )}
                 </section>
-                <p className="grad-role">{graduate.role} Developer</p>
               </aside>
             ))}
         </div>

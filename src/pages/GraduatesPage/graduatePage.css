@@ -39,11 +39,71 @@
   .graduate-card {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(321px, 1fr));
     margin: 0 10px;
+    justify-items: center;
   }
 
   .bio {
     margin: 16px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #avatar {
+    grid-area: avatar;
+    /* transition: rotate 600ms, scale 1s; */
+  }
+
+  #grad-name {
+    grid-area: name;
+  }
+
+  #grad-role {
+    grid-area: role;
+  }
+
+  #grad-bio {
+    grid-area: bio;
+  }
+
+  #grad-cv {
+    grid-area: cv;
+  }
+
+  #grad-gh {
+    grid-area: github;
+  }
+
+  #grad-email {
+    grid-area: email;
+  }
+
+  #grad-linkedin {
+    grid-area: linkedin;
+  }
+
+  #grad-website {
+    grid-area: website;
+  }
+
+  .link-info {
+    grid-area: links;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .graduate-data {
+    display: grid;
+    /* perspective: 60rem; */
+    grid-template-areas:
+      "avatar name"
+      "avatar role"
+      "bio bio"
+      "links links";
+    padding: 20px 20px 15px;
+    align-items: center;
+    width: 22rem;
+    grid-template-columns: 0.7fr;
   }
 }
