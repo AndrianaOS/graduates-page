@@ -1,5 +1,5 @@
 .footer {
-  background-color: #adff2f;
+  background-color: #f4effb;
   padding: 5px;
   margin: 20px 0 0;
   position: absolute;
@@ -12,7 +12,7 @@
 
 .socials:hover {
   font-weight: bold;
-  color: deeppink;
+  color: #59029F;
 }
 
 @media screen and (min-width: 700px) {
