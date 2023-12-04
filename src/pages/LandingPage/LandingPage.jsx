@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import "./landingPage.css";
 import Button from "../../components/Button/Button";
 import landingPic from "../../images/landingPic.webp";
+import Heading from "../../components/Heading/Heading";
 
 const LandingPage = () => {
   return (
     <div className="homepage">
+      <Heading headingName="Welcome" />
       <section className="info-area">
         <aside className="picture-area">
           <img src={landingPic} alt="group graduate pic" />
@@ -17,8 +19,8 @@ const LandingPage = () => {
             our eligible graduates and either connect with them or view some of
             their wonderful work they have created.
             <div className="form-info">
-              **NOTE: If you would like to be displayed, click button below and fill in
-              the form.
+              **NOTE: If you would like to be displayed, click button below and
+              fill in the form.
             </div>
           </p>
         </aside>

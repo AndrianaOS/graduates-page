@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import "./graduateForm.css";
+import Heading from "../../components/Heading/Heading";
 // import Button from "../../components/Button/Button.jsx";
 
 const GraduateForm = () => {
@@ -43,6 +44,7 @@ const GraduateForm = () => {
 
   return (
     <div>
+      <Heading headingName="Graduate Form"/>
       <h2 className="form-title">
         Fill in this form to be added on the Graduates list
       </h2>
@@ -50,7 +52,7 @@ const GraduateForm = () => {
         <Box
           sx={{
             display: "grid",
-            alignItems: "center",
+            alignItems: "baseline",
             "& > :not(style)": { m: 1 },
           }}
           className="form-text"
@@ -61,6 +63,7 @@ const GraduateForm = () => {
             className="demo-helper-text-aligned"
             label="Name"
             name="name"
+            type="text"
             value={formData.name}
             onChange={handleChange}
             required
@@ -71,6 +74,7 @@ const GraduateForm = () => {
             className="demo-helper-text-aligned"
             label="GitHub Link"
             name="github_url"
+            type="url"
             value={formData.github_url}
             onChange={handleChange}
             required
@@ -81,12 +85,38 @@ const GraduateForm = () => {
             className="demo-helper-text-aligned"
             label="CV"
             name="cv_link"
+            type="url"
             value={formData.cv_link}
             onChange={handleChange}
             required
           />
+          <fieldset id="role" className="role-area" required>
+            <legend>Role</legend>
+            <aside className="role-selection">
+              <label htmlFor="fullstack">Full Stack</label>
+              <input
+                type="radio"
+                id="fullstack"
+                name="role"
+                value="Fullstack"
+                checked={formData.role === "Fullstack"}
+                onChange={handleChange}
+              />
+            </aside>
+            <aside className="role-selection">
+              <label htmlFor="frontend">Frontend</label>
+              <input
+                type="radio"
+                id="frontend"
+                name="role"
+                value="Frontend"
+                checked={formData.role === "Frontend"}
+                onChange={handleChange}
+              />
+            </aside>
+          </fieldset>
         </Box>
-        <fieldset id="role" className="role-area" required>
+        {/* <fieldset id="role" className="role-area" required>
           <legend>Role</legend>
           <aside className="role-selection">
             <label htmlFor="fullstack">Full Stack</label>
@@ -94,8 +124,8 @@ const GraduateForm = () => {
               type="radio"
               id="fullstack"
               name="role"
-              value="fullstack"
-              checked={formData.role === "fullstack"}
+              value="Fullstack"
+              checked={formData.role === "Fullstack"}
               onChange={handleChange}
             />
           </aside>
@@ -105,12 +135,12 @@ const GraduateForm = () => {
               type="radio"
               id="frontend"
               name="role"
-              value="frontend"
-              checked={formData.role === "frontend"}
+              value="Frontend"
+              checked={formData.role === "Frontend"}
               onChange={handleChange}
             />
           </aside>
-        </fieldset>
+        </fieldset> */}
         <span className="form-info" id="form-info">
           **All fields are required**
         </span>
