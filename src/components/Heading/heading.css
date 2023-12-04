@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
+.wrapper {
+  height: 100px;
+}
+
 svg {
   font-family: "Acme", sans-serif;
   width: 100%;
