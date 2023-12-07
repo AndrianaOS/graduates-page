@@ -15,23 +15,23 @@
   color: #fe6f12;
 }
 
+#creator {
+  grid-area: creator;
+}
+
+#linkedin {
+  grid-area: linkedin;
+}
+
+#github {
+  grid-area: github;
+}
+
+#portfolio {
+  grid-area: portfolio;
+}
+
 @media screen and (min-width: 700px) {
-  #creator {
-    grid-area: creator;
-  }
-
-  #linkedin {
-    grid-area: linkedin;
-  }
-
-  #github {
-    grid-area: github;
-  }
-
-  #portfolio {
-    grid-area: portfolio;
-  }
-
   .footer {
     bottom: -20;
     width: 100%;
@@ -42,5 +42,16 @@
       "creator creator"
       "linkedin github"
       "portfolio portfolio";
+    /* position: absolute;
+    bottom: 0; */
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "creator creator creator"
+      "linkedin github portfolio";
   }
 }
