@@ -7,10 +7,13 @@ header {
   align-items: center;
 }
 
+.logo {
+  width: 8rem;
+}
+
 .menu-list {
   display: none;
 }
-
 
 @media screen and (min-width: 1000px) {
   .header-bar {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
+import logo from "../../images/logo.webp";
 import "./header.css";
 
 const Header = () => {
@@ -8,7 +9,7 @@ const Header = () => {
   const handleClose = () => setShowMenu(false);
   return (
     <header className="header-bar">
-      Header
+      <img src={logo} alt="logo" className="logo"/>
       {!showMenu && (
         <div className="icon" onClick={toggleMenu}>
           <span className="menu-icon"></span>
