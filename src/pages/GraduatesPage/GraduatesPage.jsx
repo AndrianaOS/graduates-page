@@ -62,6 +62,7 @@ const GraduatesPage = () => {
                   src={graduate.avatarUrl}
                   alt={`${graduate.name} Avatar`}
                   id="avatar"
+                  loading="lazy"
                 />
                 <h2 id="grad-name">{graduate.name}</h2>
                 <p className="grad-role" id="grad-role">
