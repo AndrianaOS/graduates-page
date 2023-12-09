@@ -15,9 +15,6 @@ const Navbar = ({ handleClose }) => {
         <a href="/form" className="list-item">
           Graduate Form
         </a>
-        <a href="/about" className="list-item">
-          About me
-        </a>
         <a href="/graduates" className="list-item">
           Meet the Graduates
         </a>

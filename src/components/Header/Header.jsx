@@ -9,7 +9,7 @@ const Header = () => {
   const handleClose = () => setShowMenu(false);
   return (
     <header className="header-bar">
-      <img src={logo} alt="logo" className="logo"/>
+      <img src={logo} alt="logo" className="logo" />
       {!showMenu && (
         <div className="icon" onClick={toggleMenu}>
           <span className="menu-icon"></span>
@@ -24,9 +24,6 @@ const Header = () => {
         </a>
         <a href="/form" className="list-item">
           Graduate Form
-        </a>
-        <a href="/about" className="list-item">
-          About me
         </a>
         <a href="/graduates" className="list-item">
           Meet the Graduates
