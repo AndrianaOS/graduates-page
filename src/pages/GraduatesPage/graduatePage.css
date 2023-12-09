@@ -1,7 +1,43 @@
+#avatar {
+  grid-area: avatar;
+  /* transition: rotate 600ms, scale 1s; */
+}
+
+#grad-name {
+  grid-area: name;
+}
+
+#grad-role {
+  grid-area: role;
+}
+
+#grad-bio {
+  grid-area: bio;
+}
+
+#grad-cv {
+  grid-area: cv;
+}
+
+#grad-gh {
+  grid-area: github;
+}
+
+#grad-email {
+  grid-area: email;
+}
+
+#grad-linkedin {
+  grid-area: linkedin;
+}
+
+#grad-website {
+  grid-area: website;
+}
+
 .graduate-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
 }
 
 .graduate-data {
@@ -10,18 +46,16 @@
   padding-top: 15px;
   width: 290px;
   max-width: 320px;
-  height: 509px;
+  height: 580px;
 }
 
 .graduate-data:hover {
-  rotate: y 1turn;
-  /* scale: 1; */
   background-color: #f5bcba;
   border-color: #f5bcba;
   box-shadow: 0.25rem 0.25rem 0.5rem #fe6f12;
 }
 
-.graduate-data img {
+#avatar {
   width: 170px;
   border-radius: 90px;
 }
@@ -33,19 +67,30 @@
 .link-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "cv github"
+    "linkedin website"
+    "email email";
 }
 
 .grad-role {
   text-transform: capitalize;
 }
 
+.icons {
+  width: 2rem;
+}
+
+.name-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
 @media screen and (min-width: 700px) {
   .graduate-card {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     margin: 0 10px;
-    justify-items: center;
   }
 
   .bio {
@@ -58,52 +103,18 @@
 }
 
 @media screen and (min-width: 1000px) {
-  #avatar {
-    grid-area: avatar;
-    /* transition: rotate 600ms, scale 1s; */
-  }
-
-  #grad-name {
-    grid-area: name;
-  }
-
-  #grad-role {
-    grid-area: role;
-  }
-
-  #grad-bio {
-    grid-area: bio;
-  }
-
-  #grad-cv {
-    grid-area: cv;
-  }
-
-  #grad-gh {
-    grid-area: github;
-  }
-
-  #grad-email {
-    grid-area: email;
-  }
-
-  #grad-linkedin {
-    grid-area: linkedin;
-  }
-
-  #grad-website {
-    grid-area: website;
-  }
-
   .link-info {
     grid-area: links;
     display: flex;
     justify-content: space-evenly;
   }
 
+  .graduate-card {
+    grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+  }
+
   .graduate-data {
     display: grid;
-    /* perspective: 60rem; */
     grid-template-areas:
       "avatar name"
       "avatar role"
@@ -112,6 +123,6 @@
     padding: 20px 20px 15px;
     align-items: center;
     width: 22rem;
-    /* grid-template-columns: 0.7fr; */
+    grid-template-columns: 1fr 1fr;
   }
 }

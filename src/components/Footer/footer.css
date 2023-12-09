@@ -8,6 +8,7 @@
 
 .socials {
   text-decoration: none;
+  color: #1c0133;
 }
 
 .socials:hover {
@@ -42,8 +43,6 @@
       "creator creator"
       "linkedin github"
       "portfolio portfolio";
-    /* position: absolute;
-    bottom: 0; */
   }
 }
 
