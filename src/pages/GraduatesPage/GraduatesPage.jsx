@@ -51,8 +51,6 @@ const GraduatesPage = () => {
     }));
   }, [graduateData]);
 
-  console.log(graduateData);
-
   return (
     <div>
       <section>
