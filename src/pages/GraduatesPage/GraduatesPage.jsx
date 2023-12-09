@@ -2,10 +2,14 @@ import React, { useState, useEffect, useMemo } from "react";
 import "./graduatePage.css";
 import { Link } from "react-router-dom";
 import Heading from "../../components/Heading/Heading";
+import cvIcon from "../../images/cv.webp";
+import portfolioIcon from "../../images/portfolio.webp";
+import emailIcon from "../../images/email.webp";
+import githubIcon from "../../images/github.webp";
+import linkedinIcon from "../../images/linkedin.webp";
 
 const GraduatesPage = () => {
   const [graduateData, setGraduateData] = useState([]);
-  //   const [graduateGithubData, setGraduateGithubData] = useState([]);
 
   async function getAllGraduates() {
     try {
@@ -73,22 +77,59 @@ const GraduatesPage = () => {
                 </p>
                 <section className="link-info" id="link-info">
                   <p id="grad-cv">
-                    <a href={graduate.cvLink}>CV</a>
+                    <a href={graduate.cvLink} className="socials name-icon">
+                      <img src={cvIcon} alt="cv icon" className="icons" />
+                      CV
+                    </a>
                   </p>
                   <p id="grad-gh">
-                    <a href={graduate.githubLink}>GitHub</a>
+                    <a href={graduate.githubLink} className="socials name-icon">
+                      <img
+                        src={githubIcon}
+                        alt="github icon"
+                        className="icons"
+                      />
+                      GitHub
+                    </a>
                   </p>
                   {graduate.email && (
                     <p id="grad-email">
-                      <a href={graduate.email}>Email</a>
+                      <a href={graduate.email} className="socials name-icon">
+                        <img
+                          src={emailIcon}
+                          alt="email icon"
+                          className="icons"
+                        />
+                        Email
+                      </a>
                     </p>
                   )}
                   <p id="grad-linkedin">
-                    <a href={graduate.linkedInLink}>LinkedIn</a>
+                    <a
+                      href={graduate.linkedInLink}
+                      className="socials name-icon"
+                    >
+                      <img
+                        src={linkedinIcon}
+                        alt="linkedin icon"
+                        className="icons"
+                      />
+                      LinkedIn
+                    </a>
                   </p>
                   {graduate.websiteUrl && (
                     <p id="grad-website">
-                      <a href={graduate.websiteUrl}>Portfolio</a>
+                      <a
+                        href={graduate.websiteUrl}
+                        className="socials name-icon"
+                      >
+                        <img
+                          src={portfolioIcon}
+                          alt="portfolio icon"
+                          className="icons"
+                        />
+                        Portfolio
+                      </a>
                     </p>
                   )}
                 </section>
