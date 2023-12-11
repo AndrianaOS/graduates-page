@@ -22,6 +22,7 @@ const GraduateForm = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "https://graduates-server.onrender.com",
       },
       body: JSON.stringify({
         name: formData.name,
