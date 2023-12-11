@@ -18,7 +18,7 @@ const GraduateForm = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("http://127.0.0.1:5000/submit_graduate", {
+    fetch("https://graduates-server.onrender.com/submit_graduate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
