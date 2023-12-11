@@ -47,7 +47,7 @@ Backend hosted on on this repository: <a href="https://github.com/AndrianaOS/gra
 <h2>💻 Screenshot</h2>
 
 <div align="center">
-  <img src="https://drive.google.com/file/d/16mYNP2DJSwcb7HGiJkqWfypZlt9eN_lm/view?usp=drive_link" alt="Image of deployed website" width="250" height="500" />
+  <img src="https://drive.google.com/uc?export=view&id=16mYNP2DJSwcb7HGiJkqWfypZlt9eN_lm" alt="Image of deployed website" width="250" height="500" />
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
