@@ -60,19 +60,23 @@ const GraduatesPage = () => {
           {memoizedGraduates.length > 0 &&
             memoizedGraduates.map((graduate) => (
               <aside key={graduate.id} className="graduate-data">
-                <img
-                  src={graduate.avatarUrl}
-                  alt={`${graduate.name} Avatar`}
-                  id="avatar"
-                  loading="lazy"
-                />
+                {graduate.avatarUrl && (
+                  <img
+                    src={graduate.avatarUrl}
+                    alt={`${graduate.name} Avatar`}
+                    id="avatar"
+                    loading="lazy"
+                  />
+                )}
                 <h2 id="grad-name">{graduate.name}</h2>
                 <p className="grad-role" id="grad-role">
                   {graduate.role} Developer
                 </p>
-                <p className="bio" id="grad-bio">
-                  <b>About Me:</b> {graduate.bio}
-                </p>
+                {graduate.bio && (
+                  <p className="bio" id="grad-bio">
+                    <b>About Me:</b> {graduate.bio}
+                  </p>
+                )}
                 <section className="link-info" id="link-info">
                   <p id="grad-cv">
                     <a href={graduate.cvLink} className="socials name-icon">
@@ -102,19 +106,21 @@ const GraduatesPage = () => {
                       </a>
                     </p>
                   )}
-                  <p id="grad-linkedin">
-                    <a
-                      href={graduate.linkedInLink}
-                      className="socials name-icon"
-                    >
-                      <img
-                        src={linkedinIcon}
-                        alt="linkedin icon"
-                        className="icons"
-                      />
-                      LinkedIn
-                    </a>
-                  </p>
+                  {graduate.linkedInLink && (
+                    <p id="grad-linkedin">
+                      <a
+                        href={graduate.linkedInLink}
+                        className="socials name-icon"
+                      >
+                        <img
+                          src={linkedinIcon}
+                          alt="linkedin icon"
+                          className="icons"
+                        />
+                        LinkedIn
+                      </a>
+                    </p>
+                  )}
                   {graduate.websiteUrl && (
                     <p id="grad-website">
                       <a
